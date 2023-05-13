@@ -217,7 +217,23 @@
 const redSquare = document.querySelector(".red-square");
 redSquare.style.backgroundColor = "green";
 
+const elementsToChange = document.querySelectorAll(".js-target");
+for (let i = 0; i < elementsToChange.length; i++) {
+  const currentElement = elementsToChange[i];
+  currentElement.innerText = "Modified by JavaScript!";
+}
+
 // Events and Listeners
+const button = document.querySelector("#event-button");
+button.addEventListener("click", function () {
+  alert("Hey there!"); // modal UI
+});
+
+const input = document.querySelector("#input-to-copy");
+const paragraph = document.querySelector("#p-to-copy-to");
+input.addEventListener("keyup", function () {
+  paragraph.innerText = input.value;
+});
 
 // JSON
 
