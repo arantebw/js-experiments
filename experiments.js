@@ -235,6 +235,19 @@ input.addEventListener("keyup", function () {
   paragraph.innerText = input.value;
 });
 
+const colorInput = document.querySelector(".color-input");
+const colorParagraph = document.querySelector(".color-box");
+colorInput.addEventListener("change", function () {
+  colorParagraph.style.backgroundColor = colorInput.value;
+});
+
+// Method chaining
+document
+  .querySelector("#button-container")
+  .addEventListener("click", function (event) {
+    alert(`You clicked button #${event.target.innerText}`);
+});
+
 // JSON
 
 // AJAX (Asynchronous JavaScript and XML)
